@@ -31,7 +31,7 @@ jobs:
           run: hugo
 
         - name: Create cname file
-          run: echo ${{ domain_name }} > public/CNAME
+          run: echo ${{ github.event.inputs.domain_name }} > public/CNAME
 
         - name: Install ssh key
           uses: shimataro/ssh-key-action@v2
@@ -40,7 +40,7 @@ jobs:
             known_hosts: 'placeholder'
 
         - name: Adding Known Hosts
-          run: ssh-keyscan -H l@${{ domain_name }} >> ~/.ssh/known_hosts
+          run: ssh-keyscan -H l@${{ github.event.inputs.domain_name }} >> ~/.ssh/known_hosts
 
         - name: Rsync site
-          run: rsync -avz --delete public/ l@${{ domain_name }}:/var/www/${{ domain_name }}
+          run: rsync -avz --delete public/ l@${{ github.event.inputs.domain_name }}:/var/www/${{ github.event.inputs.domain_name }}
