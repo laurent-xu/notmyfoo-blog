@@ -9,3 +9,5 @@ jobs:
         uses: ./.github/workflows/publish_blog.yml
         with:
             domain_name: notmyfoo.io
+        secrets:
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
