@@ -10,6 +10,9 @@ on:
 jobs:
     deploy:
         runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: ./notmyfoo
 
         steps:
 
@@ -26,9 +29,6 @@ jobs:
 
         - name: Clean public directory
           run: rm -rf public
-
-        - name: Go in blog base directory
-          run: cd notmyfoo
 
         - name: Build
           run: hugo
