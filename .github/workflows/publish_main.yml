@@ -1,0 +1,11 @@
+name: Publish main branch
+
+on:
+    push:
+        branches: [ main ]
+
+jobs:
+    deploy:
+        uses: ./.github/workflows/publish_blog.yml
+        with:
+            domain_name: notmyfoo.io

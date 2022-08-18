@@ -1,0 +1,46 @@
+name: Publish blog
+
+on:
+    workflow_call:
+        inputs:
+            domain_name:
+                required: true
+                type: string
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+
+        - name: Checkout
+          uses: actions/checkout@v2
+          with:
+            submodules: true  # Fetch Hugo themes
+            fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+        - name: Setup Hugo
+          uses: peaceiris/actions-hugo@v2
+          with:
+            hugo-version: 'latest'
+
+        - name: Clean public directory
+          run: rm -rf public
+
+        - name: Build
+          run: hugo
+
+        - name: Create cname file
+          run: echo ${{ domain_name }} > public/CNAME
+
+        - name: Install ssh key
+          uses: shimataro/ssh-key-action@v2
+          with:
+            key: ${{ secrets.SSH_PRIVATE_KEY }}
+            known_hosts: 'placeholder'
+
+        - name: Adding Known Hosts
+          run: ssh-keyscan -H l@${{ domain_name }} >> ~/.ssh/known_hosts
+
+        - name: Rsync site
+          run: rsync -avz --delete public/ l@${{ domain_name }}:/var/www/${{ domain_name }}
