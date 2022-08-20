@@ -6,7 +6,7 @@ draft: false
 
 ### It's me Laurent, I am a nerd in short.
 
-There are other traits in my personality, but even I tend to forget I am more than just a robo * cough cough * geek. I grew up as an introvert and became extrovert. After being separated from elementary school my best friend, being more social became my only way to make friends. So today, I still love meeting new people, but I like my alone time coding/building very much as well.
+There are other traits in my personality, but even I tend to forget I am more than just a robo * cough cough * geek. As a kid I was introvert and I became extroverted later. I made the transition to being more outgoing during my teen years. I challenged myself to get more out out of my comfort zone back then. Today, I still love meeting new people, but I like my alone time coding/building very much as well.
 
 I have been living in the Amsterdam for three years now. I feel both new and old in this city, because most of my time here was during the Covid-19 pandemic (That terrible disease our kids will have to learn about in their history class). Unfortunately, this is not an excuse I can use for much longer. The truth is I am very bad at exploring.
 
@@ -26,4 +26,4 @@ I am pure product from France or not. I am what we call an FBC, same as an ABC (
   - My 2 older sisters who had to leave their home while being kids
   - Their hardwork paid for my education. I got off easy. I was, indeed, still very young during the financially tougher years of my family. Also I did not have to move to another continent and learn a new language in the middle of elementary like my sisters.
 
-My journey in Programming starts at the age of 9 (approximately). My parents thought video games were bad for me. They would cut my internet connection everyday before going to work. Being trapped at home and very bored, I decided to build my own games and I googled at my friend's house "Comment faire des jeux video ??" (the French for how to make video games). The first link was a tutorial about C programming on le SiteDuZero (today renamed to OpenClassrooms). From here I printed the entire tutorial and studied it on paper. I learnt pointers and other abstract concepts before I learnt how to divide by numbers with more than one digit. The rest is history (competitive programming, Epita, trading industry).
+My journey in Programming starts at the age of 9 (approximately). My parents thought video games were bad for me. They would cut my internet connection everyday before going to work. To beat the boredom, I decided to build my own games and I googled at my friend's house "Comment faire des jeux video ??" (the French for "how to make video games ??"). The first link was a tutorial about C programming on le SiteDuZero (today renamed to OpenClassrooms). From here I printed the entire tutorial and studied it on paper. The rest is history: competitive programming, Epita, trading industry.
